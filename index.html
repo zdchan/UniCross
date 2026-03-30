@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniForce: Unified Force-closure Dexterous Manipulation Synthesis</title>
+    <meta
+      name="description"
+      content="Academic project page for UniForce: Unified Force-closure Dexterous Manipulation Synthesis."
+    />
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <h1>UniForce: Unified Force-closure Dexterous Manipulation Synthesis</h1>
+        <p class="hero__authors">
+          <a href="https://zdchan.github.io/" target="_blank" rel="noreferrer">Hui Zhang<sup>1,2</sup></a>,
+          <a href="https://www.inspire.ch/en/about-us/team/ferchow-julian/" target="_blank" rel="noreferrer">Julian Ferchow<sup>2</sup></a>,
+          <a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/SONG-Jie/jsongroas" target="_blank" rel="noreferrer">Jie Song<sup>3</sup></a>,
+          <a href="https://pdz.ethz.ch/the-group/people/meboldt.html" target="_blank" rel="noreferrer">Mirko Meboldt<sup>1</sup></a>
+        </p>
+
+        <p class="hero__affiliations">
+          <span><sup>1</sup>ETH Z&uuml;rich, Switzerland</span>
+          <span><sup>2</sup>inspire AG, Z&uuml;rich, Switzerland</span>
+          <span><sup>3</sup>HKUST (Guangzhou), China</span>
+        </p>
+
+        <div class="hero__actions">
+          <a class="action-button" href="#" aria-label="Paper link placeholder">Paper</a>
+          <a class="action-button" href="#" aria-label="arXiv link placeholder">arXiv</a>
+          <a class="action-button action-button--muted" href="#" aria-label="Code placeholder">Code (Coming soon)</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="section section--feature" id="demo">
+        <div class="section-heading">
+          <h2>Overview</h2>
+        </div>
+
+        <div class="feature-card">
+          <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+            <div class="video-crop__viewport">
+              <video
+                class="feature-card__video video-crop__media"
+                src="videos/full_demo.mp4"
+                autoplay
+                controls
+                muted
+                playsinline
+                loop
+                preload="metadata"
+              ></video>
+              </div>
+          </div>
+          <p class="feature-card__caption">
+            We present a framework that unifies the synthesis of different force-closure dexterous
+            manipulation skills into a unified solution space, leading to a single policy to perform
+            grasping, relocation, in-hand rotation, and in-hand translation. The unified policy further 
+            supports seamless chaining of different skills for long-horizon continuous manipulation.
+            The embodiment-agnostic framework can also be effectively applied to different hand
+            morphologies.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--abstract" id="abstract">
+        <div class="section-heading">
+          <h2>Abstract</h2>
+        </div>
+
+        <div class="abstract-card">
+          <p>
+            Force-closure manipulation is a fundamental component of human dexterous manipulation,
+            enabling stable yet flexible hand-object interactions. From the perspective of
+            hand-object relative motion, this kind of manipulation can be categorized into four
+            canonical skills: grasping, relocation, in-hand rotation, and in-hand translation.
+            Human hands naturally involve flexible compositions of these skills to accomplish
+            complex manipulation tasks.
+          </p>
+          <p>
+            However, prior approaches often model them separately with skill-specific action
+            constraints, objectives, or even dedicated hand morphologies, which limits
+            generalization and disrupts continuity for compositional long-term manipulation. In
+            this work, we present a unified framework that models all four skills within a single
+            formulation, sharing the same state and action spaces and using a common objective
+            structure. This unified formulation enables a single policy to learn all skills jointly,
+            achieving per-skill performance comparable to or exceeding specialized methods.
+          </p>
+          <p>
+            With a compact interaction-aware object shape representation, the policy performs
+            geometry-adaptive motions and generalizes to unseen shapes. Without skill-specific
+            constraints, the policy naturally supports seamless composition of multiple skills for
+            long-horizon manipulation. Moreover, the embodiment-agnostic formulation can be
+            effectively applied to different hand morphologies. Overall, our results suggest that
+            canonical force-closure manipulation skills can be viewed as instantiations of a unified
+            structure, leading to a common solution space with better generalization and continuity.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="long-term-motion">
+        <div class="section-heading">
+          <h2>Long-term Motion</h2>
+          <p>
+            Long-term motions generated with our single (per-hand) unified policy.
+          </p>
+        </div>
+
+        <div class="video-grid video-grid--five">
+          <article class="video-card">
+            <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+              <div class="video-crop__viewport">
+                <video class="video-crop__media" src="videos/cropped/multi_mano1.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+            </div>
+          </article>
+          <article class="video-card">
+            <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+              <div class="video-crop__viewport">
+                <video class="video-crop__media" src="videos/cropped/multi_mano2.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+            </div>
+          </article>
+          <article class="video-card">
+            <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+              <div class="video-crop__viewport">
+                <video class="video-crop__media" src="videos/cropped/multi_allegro1.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+            </div>
+          </article>
+          <article class="video-card">
+            <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+              <div class="video-crop__viewport">
+                <video class="video-crop__media" src="videos/cropped/multi_allegro2.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <h2>Different Force-closure Skills</h2>
+          <p>
+            A unified policy covers grasping, relocation, in-hand rotation, in-hand translation, and
+            continuous skill chaining in a shared solution space.
+          </p>
+        </div>
+
+        <div class="skills-layout">
+          <article class="skill-card">
+            <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+              <div class="video-crop__viewport">
+                <video class="video-crop__media" src="videos/mano/grasp.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+            </div>
+            <h3>Grasping</h3>
+          </article>
+          <article class="skill-card">
+            <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+              <div class="video-crop__viewport">
+                <video class="video-crop__media" src="videos/cropped/mano_relocate.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+            </div>
+            <h3>Relocation</h3>
+          </article>
+          <article class="skill-card skill-card--grouped">
+            <div class="skill-card__row">
+              <div class="skill-card__media">
+                <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+                  <div class="video-crop__viewport">
+                    <video class="video-crop__media" src="videos/mano/rotate_1.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+                </div>
+              </div>
+              <div class="skill-card__media">
+                <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+                  <div class="video-crop__viewport">
+                    <video class="video-crop__media" src="videos/mano/rotate_2.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+                </div>
+              </div>
+            </div>
+            <h3>In-hand Rotation</h3>
+          </article>
+          <article class="skill-card skill-card--grouped">
+            <div class="skill-card__row">
+              <div class="skill-card__media">
+                <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+                  <div class="video-crop__viewport">
+                    <video class="video-crop__media" src="videos/mano/trans_1.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+                </div>
+              </div>
+              <div class="skill-card__media">
+                <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+                  <div class="video-crop__viewport">
+                    <video class="video-crop__media" src="videos/mano/trans_2.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+                </div>
+              </div>
+            </div>
+            <h3>In-hand Translation</h3>
+          </article>
+          <article class="skill-card skill-card--composition">
+            <div class="video-card__media video-card__media--compact">
+              <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+                <div class="video-crop__viewport">
+                  <video class="video-crop__media" src="videos/mano/combination.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+              </div>
+            </div>
+            <h3>Skill Composition</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="morphologies">
+        <div class="section-heading">
+          <h2>Generalization to Different Hand Morphologies</h2>
+          <p>
+            The same formulation transfers to different dexterous hand embodiments.
+          </p>
+        </div>
+
+        <div class="video-grid video-grid--morphologies">
+          <article class="video-card video-card--morphology">
+            <div class="video-card__media video-card__media--compact">
+              <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+                <div class="video-crop__viewport">
+                  <video class="video-crop__media" src="videos/Allegro/skill_1p5x.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+              </div>
+            </div>
+            <h3>Per-skill Generalization</h3>
+          </article>
+          <article class="video-card video-card--morphology">
+            <div class="video-card__media video-card__media--compact">
+              <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+                <div class="video-crop__viewport">
+                  <video class="video-crop__media" src="videos/Allegro/combination.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+              </div>
+            </div>
+            <h3>Allegro Skill Composition</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--single" id="adaptive">
+        <div class="section-heading">
+          <h2>Adaptive Motion to Object Geometries &amp; Scales</h2>
+          <p>
+            The policy adapts motion patterns and contact transitions to object geometry and scale
+            with a compact interaction-aware representation.
+          </p>
+        </div>
+
+        <article class="video-card video-card--single">
+          <div class="video-card__media video-card__media--compact">
+            <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+              <div class="video-crop__viewport">
+                <video class="video-crop__media" src="videos/adaptive.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+          <!-- <h3>Adaptive Manipulation Behavior</h3> -->
+        </article>
+      </section>
+
+      <section class="section section--single" id="unseen">
+        <div class="section-heading">
+          <h2>Generalization to Unseen Objects</h2>
+          <p>
+            The unified manipulation policy preserves stable and flexible force-closure interaction
+            patterns even on unseen object geometries.
+          </p>
+        </div>
+
+        <article class="video-card video-card--single">
+          <div class="video-card__media video-card__media--compact">
+            <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+              <div class="video-crop__viewport">
+                <video class="video-crop__media" src="videos/unseen.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+          <!-- <h3>Unseen Object Generalization</h3> -->
+        </article>
+      </section>
+
+      <section class="section section--bibtex" id="bibtex">
+        <div class="section-heading">
+          <h2>BibTeX</h2>
+        </div>
+
+        <pre class="bibtex-block"><code>@article{zhang2026uniforce,
+  title   = {UniForce: Unified Force-closure Dexterous Manipulation Synthesis},
+  author  = {Zhang, Hui and Ferchow, Julian and Song, Jie and Meboldt, Mirko},
+  journal = {To be updated},
+  year    = {2026}
+}</code></pre>
+      </section>
+    </main>
+  </body>
+</html>
