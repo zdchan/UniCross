@@ -60,7 +60,7 @@
           <p class="feature-card__caption">
             We present UniCross, a unified dexterous manipulation framework that
             synthesizes grasping, relocation, in-hand rotation, and in-hand translation
-            within a shared hand-object relational formulation. This cross-skill
+            using a shared hand-object relational formulation. This cross-skill
             formulation enables a single policy to perform individual skills and their
             seamless composition for long-horizon manipulation. The embodiment-agnostic
             framework also transfers effectively across different hand morphologies.
@@ -78,28 +78,27 @@
             Many dexterous manipulation tasks require the object to remain securely
             held by the hand during interaction. From the perspective of hand-object
             relational motion, this kind of manipulation involves four canonical skills:
-            grasping, relocation, in-hand rotation, and in-hand translation. Human hands
-            naturally involve flexible combinations of these skills to accomplish complex
+            grasping, relocation, in-hand rotation, and in-hand translation. 
+          </p>
+          <p>
+            Human hands naturally involve flexible combinations of these skills to accomplish complex
             manipulation tasks. However, existing approaches typically model these
+            skills separately with skill-specific action constraints, objectives, or even
+            dedicated hand morphologies, which limits compatibility and continuity
+            for long-horizon compositional manipulation. In this work, we present a
+            unified framework that models all four skills within a single formulation,
+            sharing the same state and action spaces and a common objective structure.
           </p>
           <p>
-            Existing approaches typically model these skills separately with
-            skill-specific action constraints, objectives, or even dedicated hand
-            morphologies, which limits compatibility and continuity for long-horizon
-            compositional manipulation. In this work, we present UniCross, a unified
-            framework that models all four skills within a shared formulation, using
-            the same state and action spaces together with a common objective
-            structure. This cross-skill formulation enables a single policy to achieve
-            strong per-skill performance while naturally supporting seamless skill
-            chaining.
-          </p>
-          <p>
+            This unified formulation enables a single cross-skill policy to achieve
+            strong per-skill performance with robustness to disturbances, and naturally
+            supports long-horizon manipulation by seamlessly chaining multiple skills.
             With a compact interaction-aware object shape representation, the policy
             performs geometry-adaptive motions and generalizes to unseen shapes. The
             framework also transfers effectively across different hand morphologies.
-            Overall, our results suggest that canonical dexterous manipulation skills
-            can be synthesized within a common cross-skill structure, revealing the
-            intrinsic consistency and shared solution space across different behaviors.
+            Overall, our results suggest that different dexterous manipulation skills
+            can be viewed as instantiations of a shared task formulation, revealing the
+            intrinsic connections and consistency across different behaviors.
           </p>
         </div>
       </section>
@@ -148,9 +147,8 @@
         <div class="section-heading">
           <h2>Cross-Skill Dexterous Manipulation</h2>
           <p>
-            A single unified policy spans grasping, relocation, in-hand rotation,
-            in-hand translation, and seamless skill composition in one shared
-            solution space.
+            A single unified policy can perform grasping, relocation, in-hand rotation,
+            in-hand translation, and seamless skill composition.
           </p>
         </div>
 
@@ -259,8 +257,7 @@
         <div class="section-heading">
           <h2>Adaptive Motion Across Object Geometries &amp; Scales</h2>
           <p>
-            The policy adapts motion patterns and contact transitions to object geometry and scale
-            with a compact interaction-aware representation.
+            The policy automatically adapts motion patterns and contact transitions to object geometry and scale.
           </p>
         </div>
 
@@ -280,8 +277,8 @@
         <div class="section-heading">
           <h2>Generalization to Unseen Objects</h2>
           <p>
-            The unified cross-skill policy preserves coherent interaction patterns
-            even on unseen object geometries.
+            The unified cross-skill policy preserves effectively coherent interaction patterns
+           on unseen object geometries.
           </p>
         </div>
 
