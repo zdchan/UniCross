@@ -58,12 +58,9 @@
               </div>
           </div>
           <p class="feature-card__caption">
-            We present a framework that unifies the synthesis of different force-closure dexterous
-            manipulation skills into a unified solution space, leading to a single policy to perform
-            grasping, relocation, in-hand rotation, and in-hand translation. The unified policy further 
-            supports seamless chaining of different skills for long-horizon continuous manipulation.
-            The embodiment-agnostic framework can also be effectively applied to different hand
-            morphologies.
+            We present a unified dexterous manipulation framework that models grasping, relocation, in-hand translation, and in-hand rotation under a shared
+hand-object relational formulation. This coherent formulation facilitates cross-skill compatibility and continuity, enabling a single policy to perform long-
+horizon manipulation through seamless skill chaining. The embodiment-agnostic framework transfers effectively across different hand morphologies.
           </p>
         </div>
       </section>
@@ -75,30 +72,26 @@
 
         <div class="abstract-card">
           <p>
-            Force-closure manipulation is a fundamental component of human dexterous manipulation,
-            enabling stable yet flexible hand-object interactions. From the perspective of
-            hand-object relative motion, this kind of manipulation can be categorized into four
-            canonical skills: grasping, relocation, in-hand rotation, and in-hand translation.
-            Human hands naturally involve flexible compositions of these skills to accomplish
-            complex manipulation tasks.
-          </p>
-          <p>
-            However, prior approaches often model them separately with skill-specific action
-            constraints, objectives, or even dedicated hand morphologies, which limits
-            generalization and disrupts continuity for compositional long-term manipulation. In
-            this work, we present a unified framework that models all four skills within a single
-            formulation, sharing the same state and action spaces and using a common objective
-            structure. This unified formulation enables a single policy to learn all skills jointly,
-            achieving per-skill performance comparable to or exceeding specialized methods.
-          </p>
-          <p>
-            With a compact interaction-aware object shape representation, the policy performs
-            geometry-adaptive motions and generalizes to unseen shapes. Without skill-specific
-            constraints, the policy naturally supports seamless composition of multiple skills for
-            long-horizon manipulation. Moreover, the embodiment-agnostic formulation can be
-            effectively applied to different hand morphologies. Overall, our results suggest that
-            canonical force-closure manipulation skills can be viewed as instantiations of a unified
-            structure, leading to a common solution space with better generalization and continuity.
+            Many dexterous manipulation tasks require the object to remain securely
+held by the hand during interaction. From the perspective of hand-object
+relational motion, this kind of manipulation involves four canonical skills:
+grasping, relocation, in-hand rotation, and in-hand translation. Human hands
+naturally involve flexible combinations of these skills to accomplish complex
+manipulation tasks. However, existing approaches typically model these
+skills separately with skill-specific action constraints, objectives, or even
+dedicated hand morphologies, which limits compatibility and continuity
+for long-horizon compositional manipulation. In this work, we present a
+unified framework that models all four skills within a single formulation,
+sharing the same state and action spaces and a common objective struc-
+ture. This unified formulation enables a single cross-skill policy to achieve
+strong per-skill performance with robustness to disturbances, and naturally
+supports long-horizon manipulation by seamlessly chaining multiple skills.
+With a compact interaction-aware object shape representation, the policy
+performs geometry-adaptive motions and generalizes to unseen shapes. The
+framework also transfers effectively across different hand morphologies.
+Overall, our results suggest that different dexterous manipulation skills
+can be viewed as instantiations of a shared task formulation, revealing the
+intrinsic connections and consistency across different behaviors.
           </p>
         </div>
       </section>
