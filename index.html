@@ -17,7 +17,8 @@
         <h1>UniCross: Unified Cross-Skill Dexterous Manipulation Synthesis</h1>
         <p class="hero__authors">
           <a href="https://zdchan.github.io/" target="_blank" rel="noreferrer">Hui Zhang<sup>1,2</sup></a>,
-          <a href="https://www.inspire.ch/en/about-us/team/ferchow-julian/" target="_blank" rel="noreferrer">Julian Ferchow<sup>2</sup></a>,
+          Julian Ferchow<sup>2</sup>,
+          <!-- <a href="https://www.inspire.ch/en/about-us/team/ferchow-julian/" target="_blank" rel="noreferrer">Julian Ferchow<sup>2</sup></a>, -->
           <a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/SONG-Jie/jsongroas" target="_blank" rel="noreferrer">Jie Song<sup>3</sup></a>,
           <a href="https://pdz.ethz.ch/the-group/people/meboldt.html" target="_blank" rel="noreferrer">Mirko Meboldt<sup>1</sup></a>
         </p>
@@ -76,29 +77,28 @@
         <div class="abstract-card">
           <p>
             Many dexterous manipulation tasks require the object to remain securely
-            held by the hand during interaction. From the perspective of hand-object
-            relational motion, this kind of manipulation involves four canonical skills:
-            grasping, relocation, in-hand rotation, and in-hand translation. 
+            held throughout the interaction. From the perspective of hand-object
+            relational motion, such manipulation comprises four canonical skills:
+            grasping, relocation, in-hand rotation, and in-hand translation.
           </p>
           <p>
-            Human hands naturally involve flexible combinations of these skills to accomplish complex
-            manipulation tasks. However, existing approaches typically model these
-            skills separately with skill-specific action constraints, objectives, or even
-            dedicated hand morphologies, which limits compatibility and continuity
-            for long-horizon compositional manipulation. In this work, we present a
-            unified framework that models all four skills within a single formulation,
-            sharing the same state and action spaces and a common objective structure.
+            Human hands flexibly compose these skills to accomplish complex tasks.
+            Existing approaches, however, model these skills separately with
+            skill-specific action constraints, objectives, or even dedicated hand
+            morphologies, which breaks the compatibility and continuity required for
+            long-horizon composition. In this work, we present a unified framework
+            that models all four skills in a single formulation that shares the same
+            state and action spaces and a common objective structure.
           </p>
           <p>
-            This unified formulation enables a single cross-skill policy to achieve
-            strong per-skill performance with robustness to disturbances, and naturally
-            supports long-horizon manipulation by seamlessly chaining multiple skills.
-            With a compact interaction-aware object shape representation, the policy
-            performs geometry-adaptive motions and generalizes to unseen shapes. The
-            framework also transfers effectively across different hand morphologies.
-            Overall, our results suggest that different dexterous manipulation skills
-            can be viewed as instantiations of a shared task formulation, revealing the
-            intrinsic connections and consistency across different behaviors.
+            This formulation enables the distillation of a single cross-skill policy
+            that performs strongly on every skill, generalizes to unseen objects,
+            stays robust to disturbances, and chains skills seamlessly into
+            long-horizon manipulation. The framework also transfers effectively
+            across different hand morphologies. Overall, our results suggest that
+            different dexterous manipulation skills can be viewed as instantiations
+            of a shared task formulation, revealing the intrinsic consistency across
+            different behaviors.
           </p>
         </div>
       </section>
@@ -249,6 +249,16 @@
               </div>
             </div>
             <h3>Allegro Skill Composition</h3>
+          </article>
+          <article class="video-card video-card--morphology">
+            <div class="video-card__media video-card__media--compact">
+              <div class="video-crop" style="--crop-scale: 1; --crop-x: 0px; --crop-y: 0px">
+                <div class="video-crop__viewport">
+                  <video class="video-crop__media" src="videos/Sharpa/combination.mp4" autoplay controls muted playsinline loop preload="metadata"></video>
+              </div>
+              </div>
+            </div>
+            <h3>Sharpa Skill Composition</h3>
           </article>
         </div>
       </section>
