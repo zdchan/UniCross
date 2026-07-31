@@ -371,6 +371,15 @@ a {
   will-change: transform;
 }
 
+.video-crop--simulators .video-crop__viewport {
+  aspect-ratio: 43 / 20;
+}
+
+.video-crop--simulators .video-crop__media {
+  height: 100%;
+  object-fit: cover;
+}
+
 .bibtex-block {
   margin: 0;
   overflow-x: auto;
